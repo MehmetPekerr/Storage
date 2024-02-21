@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>#box {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        background-color: blueviolet;
+        margin: 10px;
+    }
+     
+    button {
+        margin: 10px;
+        padding: 6px 12px;
+
+
+    }</style>
+</head>
+<body>
+    <button id="reset">Başlangıç Değerlerine Dön</button>
+<br />
+<button id="animate-1">Küçült ve sağa kaydır</button>
+<button id="animate-2">slide up</button>
+<button id="animate-3">slide toggle</button>
+<button id="animate-4">Küçült ve aşağı kaydır</button>
+<button id="animate-5">slide down</button>
+<button id="animate-6">fade in</button>
+<button id="animate-7">fade out</button>
+ 
+<div id="box" style="width:80px;height:80px;background-color:red;"></div>
+<!-- <div id="box1" style="width:80px;height:80px;background-color:green;display:none;"></div>
+<div id="box2" style="width:80px;height:80px;background-color:blue;display:none;"></div> -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+
+$(document).ready(function () {
+    $("#reset").click(function () {
+        $("#box").css({
+            top:'0px',
+            left: '0px',
+            opacity: '1',
+            height: '200px',
+            width: '200px',
+            display: 'block',
+            borderRadius: '0%'
+        });
+    });
+ 
+    $("#animate-1").click(function () {
+        $("#box").animate({
+            left: '100px',
+            opacity: '0.5',
+            height: '150px',
+            width: '150px'
+        });
+    });
+ 
+    $("#animate-3").click(function () {
+        $("#box").animate({
+            width: 'toggle'
+        });    
+    });
+    $("#animate-4").click(function () {
+        $("#box").animate({
+            top: '100px',
+            opacity: '0.5',
+            height: '100px',
+            width: '100px'
+        });
+    });
+ 
+});
+
+
+
+$(document).ready(function(){
+  $("#animate-2").click(function(){
+    $("#box").slideUp();
+  });
+  $("#animate-5").click(function(){
+    $("#box").slideDown();
+  });
+});
+$(document).ready(function(){
+  $("#animate-6").click(function(){
+    $("#box").fadeIn();
+  });
+});
+$(document).ready(function(){
+  $("#animate-7").click(function(){
+    $("#box").fadeOut();
+  });
+});
+    </script>
+    
+</body>
+</html>
