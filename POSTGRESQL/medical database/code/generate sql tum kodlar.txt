@@ -1,0 +1,479 @@
+BEGIN;
+
+
+CREATE TABLE IF NOT EXISTS public."Arastirma Makaleleri"
+(
+
+    CONSTRAINT "Arastirma Makaleleri_pkey" PRIMARY KEY ("Makale ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Bilgi Guvenligi Politikalari"
+(
+
+    CONSTRAINT "Bilgi Guvenligi Politikalari_pkey" PRIMARY KEY ("Politika ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Calisan Egitim Programlari"
+(
+
+    CONSTRAINT "Calisan Egitim Programlari_pkey" PRIMARY KEY ("Calisan Egitim Programlari ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Depo"
+(
+
+    CONSTRAINT "Depo_pkey" PRIMARY KEY ("Depo ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Ekipman Bakim"
+(
+
+    CONSTRAINT "Ekipman Bakim_pkey" PRIMARY KEY ("Bakim ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Fatura Bilgileri"
+(
+
+    CONSTRAINT "Fatura Bilgileri_pkey" PRIMARY KEY ("Fatura ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Firma"
+(
+
+    CONSTRAINT "Firma_pkey" PRIMARY KEY ("Firma ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Guncelleme Bilgileri"
+(
+
+    CONSTRAINT "Guncelleme Bilgileri_pkey" PRIMARY KEY ("Guncelleme ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Hastane Iliski Analizleri"
+(
+
+    CONSTRAINT "Hastane Iliski Analizleri_pkey" PRIMARY KEY ("Analiz ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Inovasyon Projeleri"
+(
+
+    CONSTRAINT "Inovasyon Projeleri_pkey" PRIMARY KEY ("Proje ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Insan Kaynaklari"
+(
+
+    CONSTRAINT "Insan Kaynaklari_pkey" PRIMARY KEY ("Insan Kaynaklari ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Is Ortaklari Performansi"
+(
+
+    CONSTRAINT "Is Ortaklari Performansi_pkey" PRIMARY KEY ("Is Ortaklari ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Is Plani ve Konferanslar"
+(
+
+    CONSTRAINT "Is Plani ve Konferanslar_pkey" PRIMARY KEY ("Is Planı ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Ithalat ve Ihracat"
+(
+
+    CONSTRAINT "Ithalat ve Ihracat_pkey" PRIMARY KEY ("Ithalat ve Ihracat ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Nakliyat"
+(
+
+    CONSTRAINT "Nakliyat_pkey" PRIMARY KEY ("Nakliyat ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Pazar Arastirmalari"
+(
+
+    CONSTRAINT "Pazar Arastirmalari_pkey" PRIMARY KEY ("Pazar Arastirmasi ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Personel Bilgileri"
+(
+
+    CONSTRAINT "Personel Bilgileri_pkey" PRIMARY KEY ("Personel ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Promosyonlar"
+(
+
+    CONSTRAINT "Promosyonlar_pkey" PRIMARY KEY ("Promosyon ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Risk Degerlendirme"
+(
+
+    CONSTRAINT "Risk Degerlendirme_pkey" PRIMARY KEY ("Risk ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Satis"
+(
+
+    CONSTRAINT "Satis_pkey" PRIMARY KEY ("Satis ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Satis Kanallari"
+(
+
+    CONSTRAINT "Satis Kanallari_pkey" PRIMARY KEY ("Kanal ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Satis Stratejileri"
+(
+
+    CONSTRAINT "Satis Stratejileri_pkey" PRIMARY KEY ("Strateji ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Siparis"
+(
+
+    CONSTRAINT "Siparis_pkey" PRIMARY KEY ("Siparis ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Tedarikci"
+(
+
+    CONSTRAINT "Tedarikci_pkey" PRIMARY KEY ("Tedarikci ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Teknik Destek"
+(
+
+    CONSTRAINT "Teknik Destek_pkey" PRIMARY KEY ("Destek ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Urun Elde Etme Sureci"
+(
+
+    CONSTRAINT "Urun Elde Etme Sureci_pkey" PRIMARY KEY ("Urun Elde Etme ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Urun Geri Bildirimleri"
+(
+
+    CONSTRAINT "Urun Geri Bildirimleri_pkey" PRIMARY KEY ("Geri Bildirim ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Urun Maliyet Analizi"
+(
+
+    CONSTRAINT "Urun Maliyet Analizi_pkey" PRIMARY KEY ("Maliyet ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Urun Paketleme"
+(
+
+    CONSTRAINT "Urun Paketleme_pkey" PRIMARY KEY ("Paketleme ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Urun Tanitim Planlari"
+(
+
+    CONSTRAINT "Urun Tanitim Planlari_pkey" PRIMARY KEY ("Plan ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Urun Test Raporlari"
+(
+
+    CONSTRAINT "Urun Test Raporlari_pkey" PRIMARY KEY ("Test ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Urunler"
+(
+
+    CONSTRAINT "Urunler_pkey" PRIMARY KEY ("Urun ID")
+);
+
+CREATE TABLE IF NOT EXISTS public."Yatirim ve Finansman"
+(
+
+    CONSTRAINT "Yatirim ve Finansman_pkey" PRIMARY KEY ("Yatirim ID")
+);
+
+ALTER TABLE IF EXISTS public."Arastirma Makaleleri"
+    ADD CONSTRAINT "Tutulur" FOREIGN KEY ("Makale Firma Foreign")
+    REFERENCES public."Firma" ("Firma ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+CREATE INDEX IF NOT EXISTS "fki_MakaleFirmaForeign"
+    ON public."Arastirma Makaleleri"("Makale Firma Foreign");
+
+
+ALTER TABLE IF EXISTS public."Bilgi Guvenligi Politikalari"
+    ADD CONSTRAINT "Degerlendirilir" FOREIGN KEY ("Politika Foreign")
+    REFERENCES public."Is Plani ve Konferanslar" ("Is Planı ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+CREATE INDEX IF NOT EXISTS "fki_P"
+    ON public."Bilgi Guvenligi Politikalari"("Politika Foreign");
+
+
+ALTER TABLE IF EXISTS public."Calisan Egitim Programlari"
+    ADD CONSTRAINT "Yapilir" FOREIGN KEY ("Calisan Egitim Programlari Foreign")
+    REFERENCES public."Insan Kaynaklari" ("Insan Kaynaklari ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+CREATE INDEX IF NOT EXISTS "fki_Yapilir"
+    ON public."Calisan Egitim Programlari"("Calisan Egitim Programlari Foreign");
+
+
+ALTER TABLE IF EXISTS public."Depo"
+    ADD CONSTRAINT "Bulunur" FOREIGN KEY ("Depo Foreign")
+    REFERENCES public."Firma" ("Firma ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Ekipman Bakim"
+    ADD CONSTRAINT "Yapilir" FOREIGN KEY ("Bakim Foreign")
+    REFERENCES public."Urunler" ("Urun ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Fatura Bilgileri"
+    ADD CONSTRAINT "Elde Edilir" FOREIGN KEY ("Fatura Foreign")
+    REFERENCES public."Siparis" ("Siparis ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Guncelleme Bilgileri"
+    ADD CONSTRAINT "Tutulur" FOREIGN KEY ("Guncelleme Foreign")
+    REFERENCES public."Urunler" ("Urun ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Hastane Iliski Analizleri"
+    ADD CONSTRAINT "Tutulur" FOREIGN KEY ("Analiz Foreign")
+    REFERENCES public."Firma" ("Firma ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+CREATE INDEX IF NOT EXISTS "fki_Analiz Foreign"
+    ON public."Hastane Iliski Analizleri"("Analiz Foreign");
+
+
+ALTER TABLE IF EXISTS public."Inovasyon Projeleri"
+    ADD CONSTRAINT "Degerlendirilir" FOREIGN KEY ("Proje Foreign")
+    REFERENCES public."Is Plani ve Konferanslar" ("Is Planı ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Insan Kaynaklari"
+    ADD CONSTRAINT "Bulunur" FOREIGN KEY ("Insan Kaynaklari Foreign")
+    REFERENCES public."Firma" ("Firma ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Is Ortaklari Performansi"
+    ADD CONSTRAINT "Degerlendirilir" FOREIGN KEY ("Is Ortaklari Foreign")
+    REFERENCES public."Is Plani ve Konferanslar" ("Is Planı ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+CREATE INDEX IF NOT EXISTS "fki_Degerlendirilir"
+    ON public."Is Ortaklari Performansi"("Is Ortaklari Foreign");
+
+
+ALTER TABLE IF EXISTS public."Is Plani ve Konferanslar"
+    ADD CONSTRAINT "Yapilir" FOREIGN KEY ("Is Plani Foreign")
+    REFERENCES public."Firma" ("Firma ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+CREATE INDEX IF NOT EXISTS "fki_Is Plani Foreign"
+    ON public."Is Plani ve Konferanslar"("Is Plani Foreign");
+
+
+ALTER TABLE IF EXISTS public."Ithalat ve Ihracat"
+    ADD CONSTRAINT "Tutulur" FOREIGN KEY ("Ithalat ve Ihracat Foreign")
+    REFERENCES public."Firma" ("Firma ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+CREATE INDEX IF NOT EXISTS "fki_Tutulur"
+    ON public."Ithalat ve Ihracat"("Ithalat ve Ihracat Foreign");
+
+
+ALTER TABLE IF EXISTS public."Nakliyat"
+    ADD CONSTRAINT "Yapilir" FOREIGN KEY ("Nakliyat Foreign")
+    REFERENCES public."Urun Paketleme" ("Paketleme ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Pazar Arastirmalari"
+    ADD CONSTRAINT "Degerlendirilir" FOREIGN KEY ("Pazar Arastirmasi Foreign")
+    REFERENCES public."Is Plani ve Konferanslar" ("Is Planı ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Personel Bilgileri"
+    ADD CONSTRAINT "Tutulur" FOREIGN KEY ("Personel Foreign")
+    REFERENCES public."Insan Kaynaklari" ("Insan Kaynaklari ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Promosyonlar"
+    ADD CONSTRAINT "Yapilir" FOREIGN KEY ("Promosyon Foreign")
+    REFERENCES public."Satis Kanallari" ("Kanal ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Risk Degerlendirme"
+    ADD CONSTRAINT "Degerlendirilir" FOREIGN KEY ("Risk Foreign")
+    REFERENCES public."Is Plani ve Konferanslar" ("Is Planı ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Satis"
+    ADD CONSTRAINT "Yapilir" FOREIGN KEY ("Satis Foreign")
+    REFERENCES public."Nakliyat" ("Nakliyat ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Satis Kanallari"
+    ADD CONSTRAINT "Bulunur" FOREIGN KEY ("Kanal Foreign")
+    REFERENCES public."Urunler" ("Urun ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Satis Stratejileri"
+    ADD CONSTRAINT "Degerlendirilir" FOREIGN KEY ("Strateji Foreign")
+    REFERENCES public."Is Plani ve Konferanslar" ("Is Planı ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Siparis"
+    ADD CONSTRAINT "Yapilir" FOREIGN KEY ("Siparis Foreign")
+    REFERENCES public."Satis Kanallari" ("Kanal ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Tedarikci"
+    ADD CONSTRAINT "Bulunur" FOREIGN KEY ("Tedarikci Foreign")
+    REFERENCES public."Depo" ("Depo ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Teknik Destek"
+    ADD CONSTRAINT "Cagirilir" FOREIGN KEY ("Destek Foreign")
+    REFERENCES public."Ekipman Bakim" ("Bakim ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+CREATE INDEX IF NOT EXISTS "fki_Cagirilir"
+    ON public."Teknik Destek"("Destek Foreign");
+
+
+ALTER TABLE IF EXISTS public."Urun Elde Etme Sureci"
+    ADD CONSTRAINT "Bulunur" FOREIGN KEY ("Urun Elde Etme Foreign")
+    REFERENCES public."Firma" ("Firma ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+CREATE INDEX IF NOT EXISTS "fki_Bulunur"
+    ON public."Urun Elde Etme Sureci"("Urun Elde Etme Foreign");
+
+
+ALTER TABLE IF EXISTS public."Urun Geri Bildirimleri"
+    ADD CONSTRAINT "Bulunur" FOREIGN KEY ("Geri Bildirim Foreign")
+    REFERENCES public."Satis" ("Satis ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Urun Maliyet Analizi"
+    ADD CONSTRAINT "Yapilir" FOREIGN KEY ("Maliyet Foreign")
+    REFERENCES public."Urun Elde Etme Sureci" ("Urun Elde Etme ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Urun Paketleme"
+    ADD CONSTRAINT "Yapilir" FOREIGN KEY ("Paketleme Foreign")
+    REFERENCES public."Fatura Bilgileri" ("Fatura ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Urun Tanitim Planlari"
+    ADD CONSTRAINT "Yapilir" FOREIGN KEY ("Plan Foreign")
+    REFERENCES public."Urunler" ("Urun ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Urun Test Raporlari"
+    ADD CONSTRAINT "Yapilir" FOREIGN KEY ("Test Foreign")
+    REFERENCES public."Ekipman Bakim" ("Bakim ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Urunler"
+    ADD CONSTRAINT "Elde Edilir" FOREIGN KEY ("Urun Foreign")
+    REFERENCES public."Urun Elde Etme Sureci" ("Urun Elde Etme ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+CREATE INDEX IF NOT EXISTS "fki_Elde Edilir"
+    ON public."Urunler"("Urun Foreign");
+
+
+ALTER TABLE IF EXISTS public."Yatirim ve Finansman"
+    ADD CONSTRAINT "Bulunur" FOREIGN KEY ("Yatirim Foreign")
+    REFERENCES public."Firma" ("Firma ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+CREATE INDEX IF NOT EXISTS "fki_Yatirim Foreign"
+    ON public."Yatirim ve Finansman"("Yatirim Foreign");
+
+END;
