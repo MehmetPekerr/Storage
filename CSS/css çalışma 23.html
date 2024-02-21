@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a[target]{color: red;}
+      
+        a[target="_blank"]{ color: green;}
+
+        /* a[target="_self"]{ color: black;} */ 
+       
+        a[href ^="https"]{color: yellow;}
+       
+        a[href $=".net"]{ color: aqua;}
+        
+        a[href *="facebook"]{color: sienna;}
+
+        input[type=text]{border: 5px solid red;}
+        input[type=password]{border: 5px solid green;}
+        input[class=text1]:focus{border: 5px solid pink}
+        input[id=text1]:hover{border: 5px solid sienna;}
+
+
+
+    </style>
+</head>
+<body>
+    <a href="http://www.google.com" target="_blank">google</a><br>
+    <a href="http://www.youtube.com" target="_self">youtube</a><br>
+    <a href="http://www.facebook.com">facebook</a><br>
+    <a href="http://www.xvfxdf.net">boş site1</a><br>
+    <a href="https://www.xvfxdf.com">boş site2</a><br>
+
+
+
+    Text: <input class="text1" type="text" placeholder="focus"><br>
+    Text: <input id="text1" type="text" placeholder="hover"><br>
+
+    Password: <input id="password1" type="password"><br>
+</body>
+</html>

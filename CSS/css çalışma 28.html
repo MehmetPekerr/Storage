@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+border: 1px solid black;
+width: 50px;
+/* word-wrap: normal;
+word-wrap: break-word;
+word-break: normal;
+word-break: keep-all;
+word-break: break-all; */
+/* word-break: break-word;
+text-overflow: clip; */
+overflow: hidden;
+text-overflow: ellipsis;
+        }
+        #div1:hover{
+            overflow: visible;
+        }
+        p{
+            /* writing-mode: horizontal-tb;
+            writing-mode: vertical-lr; */
+            writing-mode: vertical-rl;
+        }
+        #div2{
+            /* text-align-last: auto;
+            text-align-last: center;
+            text-align-last: justify;
+            text-align-last: left;
+            text-align-last: right;
+            text-align-last: start; */
+            text-align-last: end;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">Araba uçak treeeeeeeeeeeeeen gemi mühendiiiiiiiiiiiiiiiiiiiiiiiis şoför doktor öğretmen</div>
+
+    <p>Bir yazı</p>
+
+    <div id="div2">Edison çok iyi bir yöneticiydi. Günümüzdeki CEO kavramının 1900'lerin başındaki en başarılı temsilcilerindendi. Tesla ise alternatif akımın doğru akıma olan üstünlüklerini ortaya çıkarmış, genel yargılara karşı gelerek yeni bir akıma liderlik etmişti. Bir liderde bulunması gereken yaratıcı dehaya sahipti.</div>
+</body>
+</html>

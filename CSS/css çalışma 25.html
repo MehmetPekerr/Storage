@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{counter-reset: baslik;}
+        h1::before{counter-increment: baslik; content: "Bölüm" counter(baslik) ":" ;}
+        h1{counter-reset: altbaslik;}
+        h2::before{counter-increment: altbaslik;content: "Alt bölüm" counter(baslik) "." counter(altbaslik) ":" ;}
+
+
+
+        
+    </style>
+</head>
+<body>
+    <h1 >Ana başlık </h1>
+    <h2>Alt başlık </h2>
+    <h2>Alt başlık </h2>
+
+    <h1 >Ana başlık </h1>
+    <h2>Alt başlık </h2>
+    <h2>Alt başlık </h2>
+
+    <h1>Ana başlık </h1>
+    <h2>Alt başlık </h2>
+    <h2>Alt başlık </h2>
+
+</body>
+</html>
