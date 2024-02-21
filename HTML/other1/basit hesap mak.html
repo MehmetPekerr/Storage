@@ -1,0 +1,45 @@
+<html> 
+<head> 
+<title>   
+</title> 
+<script > 
+ 
+function topla(ne){ 
+ne.sonuç.value=parseFloat(ne.say1.value)+parseFloat(ne.say2.value); 
+} 
+function çikar(ne){ 
+ne.sonuç.value=parseFloat(ne.say1.value)-parseFloat(ne.say2.value); 
+} 
+function çarp(ne){ 
+ne.sonuç.value=parseFloat(ne.say1.value)*parseFloat(ne.say2.value); 
+} 
+function böl(ne){ 
+ne.sonuç.value=parseFloat(ne.say1.value)/parseFloat(ne.say2.value); 
+} 
+function ort(ne){ 
+ne.sonuç.value=[parseFloat(ne.say1.value)+parseFloat(ne.say2.value)]/2; 
+} 
+</script> 
+ 
+</head> 
+<body> 
+<table width="100"bgcolor="white"
+"><tr><td> 
+<form name="formu"><font color="black"> 
+<center><b>hesap makinesi</b></center> 
+1.sayi<input type="text" name="say1"> 
+<br>2.sayi<input type="text" name="say2"> 
+<br>sonuç<input type="text" name="sonuç"> 
+<center> 
+<input type="button" value="+" onclick="topla(this.form)"> 
+<input type="button" value="-" onclick="çikar(this.form)"> 
+<input type="button" value="x" onclick="çarp(this.form)"> 
+<input type="button" value="/" onclick="böl(this.form)"> 
+<input type="button" value="ort" onclick="ort(this.form)"> 
+<input type="reset" value="SIL"><hr>
+</form> 
+
+</td></tr></table> 
+</body> 
+</html>
+ 
