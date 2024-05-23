@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div p:first-child{color: green;}
+    div p:last-child{color: blue;}
+    div p:nth-of-type(3){color: red;}
+    div p:nth-last-of-type(2){color: purple;}
+    div p:nth-last-child(3){color: orange;}
+
+    /* p:first-child i{color: aquamarine;} */
+    p i:first-child{color: palevioletred;}
+    p i:last-child{color: aqua;}
+
+    pre:not(.pre1){color: greenyellow;}
+    /* pre:not(#pre11){color: darkolivegreen;} */
+
+    /* p:nth-of-type(2n+1){color: red;}
+    p:nth-of-type(2n){color: red;}
+    p:nth-of-type(3n){color: red;}
+    p:nth-of-type(4n){color: red;}
+    p:nth-of-type(even){color: red;}
+    p:nth-of-type(odd){color: red;} */
+</style>
+</head>
+<body>
+    <div>
+    <p>Paragraf 1</p>
+    <p>Paragraf 2</p>
+    <p>Paragraf 3</p>
+    <p>Paragraf 4</p>
+    <p>Paragraf 5</p>
+    <p>Paragraf 6</p>
+</div>
+    <p><i>i ile sarmalı paragraf 1 </i> <i>i ile sarmalı paragraf 1 ikinci kısım </i> <i>i ile sarmalı paragraf 1 üçüncü kısım <i></i></p>
+    <p><i>i ile sarmalı paragraf 2</i> <i>i ile sarmalı paragraf 2 ikinci kısım </i> <i>i ile sarmalı paragraf 1 üçüncü kısım <i></i></p>
+
+    <pre>AAAA</pre>
+    <pre class="pre1" id="pre11">BBBB</pre>
+    <pre>CCCC</pre>
+    <pre>DDDD</pre>
+</body>
+</html>

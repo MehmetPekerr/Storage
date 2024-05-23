@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            /* transition-property: width;
+            transition-duration: 3s; */
+            transition: width 3s , height 5s  , background-color 3s , transform 3s;
+            /* transition-timing-function: ease;
+            transition-timing-function: linear;
+            transition-timing-function: ease-in;
+            transition-timing-function: ease-out;
+            transition-timing-function: ease-in-out; */
+            transition-delay: 1s;
+            /* transition: width 3s linear 2s; */
+
+        }
+        div:hover{
+            width: 500px;
+            height: 500px;
+            background-color: purple;
+            transform:rotate(180deg)
+        }
+    </style>
+</head>
+<body>
+    <div>Kutucuk</div>
+</body>
+</html>

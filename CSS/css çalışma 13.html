@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px solid black;
+/* empty-cells: show; */
+            empty-cells: hide;
+            border-spacing: 10px;
+            border-collapse: collapse;
+            width: 50%;
+            height: 400px;
+            /* caption-side: bottom; */
+            caption-side: top;
+        }
+        th,td{
+            border: 1px solid black;
+            padding: 10px;
+            /* text-align: left;
+            text-align: right; */
+            text-align: center;
+            /* vertical-align: top;
+            vertical-align: bottom; */
+            vertical-align: middle;
+        }
+        tr:hover{
+            background-color: aquamarine;
+        }
+        tr:nth-child(even){
+            background-color: grey;
+            color: red;
+        }
+        /* tr:nth-child(odd){
+            background-color: grey;
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+   <table>
+       <caption>Müşteri Listesi</caption>
+    <thead>
+        <tr>
+            <th>isim</th>
+            <th>meslek</th>
+            <th>yaş</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+          <td>ali  </td> 
+          <td>mühendis</td>
+          <td>25</td>
+        </tr>
+
+        <tr>
+            <td>mehmet </td> 
+            <td>doktor</td>
+            <td>35</td>    
+          </tr>
+
+          <tr>
+            <td>irem </td> 
+            <td>çevirmen</td>
+            <td>24</td>    
+          </tr>
+
+          <tr>
+            <td>ayşe </td> 
+            <td>mühendis</td>
+            <td>30</td>
+          </tr>
+    </tbody>
+   </table>
+
+</body>
+</html>
