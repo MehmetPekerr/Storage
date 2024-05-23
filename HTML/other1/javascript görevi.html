@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <input type="text" id="ornekGiris" />
+<br/>
+<input type="button" value="Array Dizisine Ekle" onClick="diziyeEkle()" />
+<p id="ornekSonuc">
+</p>
+    <script type="text/javascript">
+
+        var ornekDizi = new Array();
+        function diziyeEkle()
+        {
+            var deger = document.getElementById("ornekGiris").value;
+            ornekDizi.push(deger);
+            
+            document.getElementById("ornekSonuc").innerHTML = ornekDizi.join("  ");
+        }
+     
+        </script>
+       
+</head>
+<body>
+    
+</body>
+</html>

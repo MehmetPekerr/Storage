@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <label for="eposta">E-posta</label> <br>
+    <input type="email" id="eposta" name="eposta"> <br>
+
+    <label for="tel">Telefon</label> <br>
+    <input type="tel" id="tel" name="tel" pattern="[0-9] {11}"> <br>
+
+    <label for="number">Numara</label> <br>
+    <input type="number" id="number" name="number" min="-5" max="7"> <br>
+
+    <label for="search">Ara</label> <br>
+    <input type="search" id="search" name="search"> <br>
+
+    <label for="date">tarih</label> <br>
+    <input type="date" id="date" name="date" min="2015-09-24" > <br>
+
+    <label for="datetimelocal">yerel tarih saat</label> <br>
+    <input type="datetime-local" id="datetimelocal" name="datetimelocal"> <br>
+
+    <label for="month">ay</label> <br>
+    <input type="month" id="month" name="month"> <br>
+
+    <label for="week">hafta</label> <br>
+    <input type="week" id="week" name="week"> <br>
+
+    <label for="time">saat</label> <br>
+    <input type="time" id="time" name="time"> <br>
+
+
+    <input type="file" id="file" name="file"> <br>
+
+    <input type="url" id="url" name="url"> <br>
+
+    <input type="color" id="color" name="color"> <br>
+
+    <input type="image" id="image" name="image" width="50" height="50" src="kaydetsimge.png"> <br>
+
+
+
+    <input type="checkbox" id="ing" name="dil"><label for="ing">İngilizce</label> <br>
+
+    <input type="checkbox" id="alm" name="dil">Almanca <br>
+
+    <input type="checkbox" id="isp" name="dil">İspanyolca <br>
+
+
+    <input type="radio" id="kadın" name="cinsiyet" value="kadın"> <label for="kadın"> Kadın </label> <br>
+    <input type="radio" id="erkek" name="cinsiyet" value="erkek"> Erkek <br>
+
+
+    <input type="range" min="0" max="100" value="50"> <br>
+
+    <input type="button" value="Buton" onclick="alert('butona tıklandı')"> <br>
+
+
+    <button onclick="alert('butona tıklandı')">Tıkla</button> <br>
+
+
+   <input type="submit" value="submit"> <br>
+   
+
+   <input type="reset" value="reset"> <br>
+   
+
+
+
+    <button>Kaydet</button>
+ 
+
+
+
+</form>
+</body>
+</html>
