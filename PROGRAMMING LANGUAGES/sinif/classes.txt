@@ -1,0 +1,8 @@
+class Ornek { 
+public int x; 
+public float y; 
+private int z; 
+} 
+class MirasAlan extends Ornek { 
+public int a; 
+}
