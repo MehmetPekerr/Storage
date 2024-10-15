@@ -1,0 +1,36 @@
+1. İngilizce Öğrenme Uygulaması
+Amaç: Kullanıcıların İngilizce dilini etkili bir şekilde öğrenmelerini sağlamak.
+
+Özellikler:
+
+Sesli Kelime ve Cümle Öğrenimi: Kullanıcılar, kelimeleri ve cümle yapılarını doğru telaffuzla dinleyebilirler.
+Etkileşimli Oyunlar: Kelime dağarcığını geliştirmek ve dil bilgisi kurallarını pekiştirmek için çeşitli oyunlar ve alıştırmalar sunar.
+Konuşma Tanıma: Kullanıcıların sesli yanıtlarını analiz eder ve doğru telaffuzu destekler.
+Kişiselleştirilmiş Öğrenme Planları: Kullanıcının seviyesine ve öğrenme hızına göre özelleştirilmiş dersler ve pratik önerileri sunar.
+Çevrimdışı Erişim: Kullanıcılar, internet bağlantısı olmadan da derslere erişebilirler.
+Geri Bildirim ve İlerleme Takibi: Kullanıcılar, öğrenme sürecinde ilerlemelerini takip edebilir ve eksik oldukları alanlara odaklanabilirler.
+
+2. Dil Terapistliği Uygulaması
+Amaç: Konuşma ve dil gelişimiyle ilgili sorunları olan bireylerin terapilerini desteklemek.
+
+Özellikler:
+
+Sesli Uygulama ve Geri Bildirim: Kullanıcılar, terapist tarafından önerilen egzersizleri sesli olarak takip edebilir, kendi ses kayıtlarını dinleyerek ilerlemelerini değerlendirebilirler.
+Eğitici Oyunlar ve Etkinlikler: Dili geliştirici oyunlar ve aktiviteler, çocuklar ve yetişkinler için özel olarak tasarlanmıştır.
+Bireysel İlerleme Takibi: Kullanıcılar, terapideki ilerlemelerini kaydedebilir ve terapi hedeflerine ulaşmak için geri bildirim alabilirler.
+Uzman Erişimi: Kullanıcılar, ihtiyaç duyduklarında uzaktan terapistlerle iletişime geçebilirler.
+Aile İçin Bilgilendirme: Aile üyeleri için bilgilendirici içerikler ve rehberlik sağlayarak, evde destek sunmayı kolaylaştırır.
+Çeşitli Dillerde Destek: Farklı dillerde terapötik içerik sunarak çok dilli bireylere hitap eder.
+
+3. Vokal Yardım Uygulaması
+Amaç: Kullanıcıların vokal becerilerini geliştirmelerine yardımcı olmak.
+
+Özellikler:
+
+Ses Analizi ve Geri Bildirim: Kullanıcıların seslerini kaydetmelerine ve analiz etmelerine olanak tanır. Doğru vokal teknikleri hakkında geri bildirim verir.
+Sesli Egzersizler ve Teknikler: Kullanıcılara seslerini geliştirmeleri için rehberlik eden sesli egzersizler ve teknikler sunar.
+Eğitici Videolar: Kullanıcılar, vokal tekniklerini öğrenmelerine yardımcı olacak videolar izleyebilirler.
+Kişisel İlerleme Takibi: Kullanıcılar, ses gelişimlerini takip edebilir ve hedeflerine ulaşmak için planlar yapabilirler.
+Canlı Vokal Dersleri: Uzman eğitmenlerle online ders imkanı sunarak kullanıcıların doğrudan geri bildirim almasını sağlar.
+Müzik Terapi: Kullanıcılar, müzikle birlikte vokal gelişimlerine destek olabilecek müzik terapisi teknikleri ve alıştırmaları bulabilirler.
+Bu üç uygulama, ses işleme ve yapay zeka teknolojilerini kullanarak kullanıcıların dil ve vokal becerilerini geliştirmelerine yardımcı olmayı amaçlamaktadır. Her biri, kullanıcıların ihtiyaçlarına yönelik kişiselleştirilmiş deneyimler sunarak öğrenme süreçlerini daha etkili hale getirebilir.
