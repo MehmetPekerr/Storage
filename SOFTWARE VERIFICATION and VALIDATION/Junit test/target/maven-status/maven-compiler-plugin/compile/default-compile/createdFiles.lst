@@ -1,0 +1,5 @@
+entity\Yazar.class
+entity\Kitap.class
+entity\Uye.class
+manager\Kutuphane.class
+entity\Yayinevi.class
