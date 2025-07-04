@@ -1,0 +1,20 @@
+Backend servisi 8080 portunda çalışacak (http://localhost:8080)
+Frontend servisi 3000 portunda çalışacak (http://localhost:3000)
+PostgreSQL veritabanı arka planda çalışacak
+
+docker-compose down
+docker-compose up --build
+
+
+
+
+
+cd C:\Users\MP\Documents\NetBeansProjects\ymgders\backend>
+.\mvnw.cmd spring-boot:run
+
+
+npm install
+
+
+.\mvnw.cmd -e -X clean compile
+.\mvnw.cmd spring-boot:run
