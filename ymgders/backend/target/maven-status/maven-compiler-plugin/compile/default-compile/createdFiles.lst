@@ -1,0 +1,5 @@
+com\example\ymgders\YmgdersApplication.class
+com\example\ymgders\config\WebConfig.class
+com\example\ymgders\controller\TaskController.class
+com\example\ymgders\model\Task.class
+com\example\ymgders\repository\TaskRepository.class
